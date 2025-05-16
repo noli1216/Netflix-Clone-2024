@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from '../../utils/axios';
+import axios from "../../utils/axios";
 import requests from "../../utils/requests";
-import '../Banner/banner.css'
+import "../Banner/banner.css";
 
 const Banner = () => {
   const [movie, setMovie] = useState({});
@@ -11,7 +11,7 @@ const Banner = () => {
       try {
         const request = await axios.get(requests.fetchActionMovies);
         const results = request?.data?.results;
-        console.log(request)
+        console.log(request);
         if (Array.isArray(results) && results.length > 0) {
           const randomIndex = Math.floor(Math.random() * results.length);
           setMovie(results[randomIndex]);
@@ -23,7 +23,7 @@ const Banner = () => {
       }
     })();
   }, []);
-   
+
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "…" : str;
   }

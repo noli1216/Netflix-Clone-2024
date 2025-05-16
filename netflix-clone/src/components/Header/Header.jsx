@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./header.css";
 import Logo from "../../assets/Image/Netflix_Logo.png";
