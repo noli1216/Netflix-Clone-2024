@@ -48,6 +48,10 @@
      cursor: pointer;
      font-size: 14px;
    }
+
+   .service-code:hover{
+    color: #fff;
+   }
    
    .copy-write {
      font-size: 12px;
@@ -56,4 +60,22 @@
      align-items: center;
      gap: 5px;
    }
-   
+   @media (max-width: 768px) {
+    .footer-data {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+    
+    }
+
+    .footer-icons{
+     width: 60%;
+
+    }
+
+    
+
+  
+
+
+  }

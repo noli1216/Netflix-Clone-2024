@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   z-index: 1;
+
   padding: 20px 6%;
   display: flex;
   justify-content: space-between;
@@ -11,40 +12,86 @@
   color: white;
   transition: background 0.5s ease-in;
 
-  /* Transparent background with a subtle dark gradient */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
 }
 
-
-
-.header-container{
+.header-container {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-left{
+.header-left {
   display: flex;
   align-items: center;
-  gap:50px ;
+  gap: 50px;
 }
 
-.header-left img{
+.header-left img {
   width: 90px;
+}
+.header-left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.header-left ul li {
+  cursor: pointer;
+}
+.header-right ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  cursor: pointer;
+}
+.menu-toggle {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+}
 
-}
-.header-left ul{
-     display: flex;
-     list-style: none;
-     gap: 20px;
-}
-.header-left ul li{
-     cursor: pointer;
-}
-.header-right ul{
-     display: flex;
-     list-style: none;
-     gap: 20px; ;
-     cursor: pointer;
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 10%;
+    background-color: #111;
+    padding: 15px 20px;
+
+    /* Add for sliding effect */
+    opacity: 0;
+    position: fixed; /* Keep menu on screen as fixed panel */
+  }
+
+  .nav-links.open {
+    opacity: 1;
+  }
+
+  .header-left {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .header-left img {
+    width: 60px;
+  }
+
+  .header-right ul {
+    display: none;
+  }
 }

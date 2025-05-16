@@ -26,7 +26,7 @@ const Footer = () => {
             <li>Jobs</li>
             <li>Cookie Preferences</li>
           </ul>
-          <ul>
+          <ul className="info-data2">
             <li>Gift Card</li>
             <li>Terms of Use</li>
             <li>Corporate Information</li>
